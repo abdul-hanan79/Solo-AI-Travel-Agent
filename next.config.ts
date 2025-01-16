@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    images: {
+    domains: ['tripplanner.ai'], // Add your external domain here
+  },
 };
 
 export default nextConfig;
