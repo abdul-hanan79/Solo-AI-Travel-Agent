@@ -6,5 +6,6 @@ const IMAGES = {
     AIPOWERLEFT: "/images/sideImages/aipowerleft.png",
     TOOL2: "/images/sideImages/HousePainting.png",
     TOOL3: "/images/sideImages/BottleAndSnackes.png",
+    MAP: "/images/sideImages/map.png",
 }
 export default IMAGES;

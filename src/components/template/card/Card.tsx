@@ -22,12 +22,16 @@ export default function Card({
   isButton = false,
 }: cardType) {
   return (
-    <div>
-      {isHeading && <MediumHeading variant="large">{heading}</MediumHeading>}
+    <div className="space-y-2">
+      {isHeading && (
+        <MediumHeading variant="large" weight="large">
+          {heading}
+        </MediumHeading>
+      )}
       <div
         className={`flex ${
           isButton ? "flex-col gap-y-2" : "flex-row"
-        } gap-x-2 items-center justify-center rounded-2xl px-2 py-3 w-full text-black font-semibold bg-[#bbf7f7]`}
+        } gap-x-2 items-center justify-center rounded-2xl px-5 py-5 w-full text-black font-semibold shadow-custom bg-[#bbf7f7]`}
       >
         {!isParagraph ? (
           <>
@@ -36,7 +40,12 @@ export default function Card({
             <MediumHeading variant="medium">{from}</MediumHeading>
           </>
         ) : (
-          <MediumHeading variant="small">{paragraph}</MediumHeading>
+          <MediumHeading
+            className={`${isButton && "py-4 px-2"} py-3 px-2`}
+            variant="small"
+          >
+            {paragraph}
+          </MediumHeading>
         )}
         {isButton && <Button>Book</Button>}
       </div>

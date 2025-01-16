@@ -33,12 +33,12 @@ export default function InputWithHeadingSection({
   insideData,
 }: InputWithHeading) {
   return (
-    <div className="w-full">
+    <div className="w-full pt-3">
       <Heading weight="medium">{heading}</Heading>
       {select ? (
         <select
           onChange={handlechange}
-          className="border-black border-[3px] py-3 bg-transparent font-semibold rounded-3xl text-black w-full"
+          className="border-black  border-[3px] py-3 bg-transparent font-semibold rounded-3xl text-black w-full"
         >
           {insideData?.map((data) => (
             <option

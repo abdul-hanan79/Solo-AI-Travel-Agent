@@ -55,7 +55,7 @@ export default function PlanFormSection() {
           </div>
         ))}
         <div className="pt-3">
-          <Link href={"/trip"} >
+          <Link href={"/trip"}>
             <Button type="submit">Plan My Trip!</Button>
           </Link>
         </div>

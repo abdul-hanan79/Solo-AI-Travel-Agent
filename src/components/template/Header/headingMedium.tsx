@@ -22,7 +22,7 @@ const MediumHeading = styled.h2<MediumHeadingTypes>`
       : props.variant === "large"
       ? "30px"
       : props.variant === "small"
-      ? "12px"
+      ? "16px"
       : props.variant === "extra-large"
       ? "40px"
       : props.variant === "med-small"

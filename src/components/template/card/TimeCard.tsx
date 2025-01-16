@@ -16,7 +16,7 @@ export default function TimeCard({
     <div
       className={`flex ${
         reverse ? "flex-row-reverse" : "flex-row"
-      } gap-x-2 items-center justify-center shadow-2xl rounded-2xl px-2 py-2 w-full text-black font-semibold bg-[#bbf7f7]`}
+      } gap-x-2 items-center justify-center shadow-2xl rounded-2xl px-2 py-2.5 w-full text-black font-semibold bg-[#bbf7f7]`}
     >
       <div>
         <Icon />

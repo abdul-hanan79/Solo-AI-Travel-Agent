@@ -6,7 +6,7 @@ import { TiMinus } from "react-icons/ti";
 export default function TravelersInput() {
   const [travellers, setTravellers] = useState(1);
   return (
-    <div className="space-y-1 w-full ">
+    <div className="space-y-1 w-full">
       <div>
         <h2 className="text-black font-semibold text-center">
           Number of travellers
