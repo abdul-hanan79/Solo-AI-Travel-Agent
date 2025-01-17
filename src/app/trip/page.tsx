@@ -1,4 +1,4 @@
-import FormAndImageSection from "@/components/shared/pageSection/planPageSection/FormAndImageSection";
+import FormAndImageSection from "@/components/shared/FormAndImageSection";
 import React from "react";
 
 export default function page() {

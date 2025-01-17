@@ -26,35 +26,42 @@ export default function PlanFormSection() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="lg:w-[65%] w-[80%] mx-auto py-5 flex flex-col items-center justify-center"
+      className="xl:w-[75%] w-[90%] mx-auto py-10 flex flex-col items-center justify-center"
     >
       <TravelersInput />
       <div className="w-full">
-        {InputsData.map((properties) => (
-          <div
-            key={properties.id}
-            className={`${
-              properties.id === 0
-                ? "pt-6"
-                : properties.id === 2
-                ? "pt-6"
-                : properties.id === 4
-                ? "pt-6"
-                : ""
-            }`}
-          >
-            <InputWithHeadingSection
-              name={properties.name}
-              heading={properties.heading}
-              value={values[properties.name as name]}
-              type={properties.type}
-              handlechange={handleChange}
-              select={properties.select}
-              insideData={properties.insideData}
-            />
-          </div>
-        ))}
-        <div className="pt-3">
+        <div
+          className={`grid md:grid-cols-2 grid-cols-1 md:gap-y-6 md:gap-x-4 md:py-6 items-center justify-center w-full`}
+        >
+          {InputsData.map((properties) => (
+            <div
+              key={properties.id}
+              className={` 
+                ${properties.colSpan && "md:col-span-2"}
+                ${
+                  properties.id === 0
+                    ? "md:pt-0 pt-5"
+                    : properties.id === 2
+                    ? "md:pt-0 pt-7"
+                    : properties.id === 4
+                    ? "md:pt-0 pt-7"
+                    : ""
+                }
+                  `}
+            >
+              <InputWithHeadingSection
+                name={properties.name}
+                heading={properties.heading}
+                value={values[properties.name as name]}
+                type={properties.type}
+                handlechange={handleChange}
+                select={properties.select}
+                insideData={properties.insideData}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="pt-5">
           <Link href={"/trip"}>
             <Button type="submit">Plan My Trip!</Button>
           </Link>

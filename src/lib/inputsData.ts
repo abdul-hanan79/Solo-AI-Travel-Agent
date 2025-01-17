@@ -334,6 +334,8 @@ const InputsData = [
         name: "budget",
         type: "number",
         heading: "Budget",
+        colSpan: true,
     },
+
 ];
 export default InputsData

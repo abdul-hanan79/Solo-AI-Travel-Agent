@@ -31,7 +31,7 @@ export default function Card({
       <div
         className={`flex ${
           isButton ? "flex-col gap-y-2" : "flex-row"
-        } gap-x-2 items-center justify-center rounded-2xl px-5 py-5 w-full text-black font-semibold shadow-custom bg-[#bbf7f7]`}
+        } gap-x-2 hover:scale-105 transition-all duration-300 ease-in-out items-center justify-center rounded-2xl px-5 py-5 w-full text-black font-semibold shadow-custom bg-[#bbf7f7]`}
       >
         {!isParagraph ? (
           <>

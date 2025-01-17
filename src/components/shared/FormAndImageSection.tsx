@@ -1,8 +1,8 @@
 import React from "react";
-import PlanFormSection from "./PlanFormSection";
-import ScheduleSection from "../tripPageSection/ScheduleSection";
+import PlanFormSection from "./pageSection/planPageSection/PlanFormSection";
+import ScheduleSection from "./pageSection/tripPageSection/ScheduleSection";
 import Image from "next/image";
-import IMAGES from "../../../../../public/images";
+import IMAGES from "../../../public/images";
 
 interface FormAndImageSectionType {
   forPage?: string;
@@ -26,7 +26,9 @@ export default function FormAndImageSection({
           width={800}
           height={800}
           alt="CoverImage"
-          className={` absolute inset-0 rounded-3xl w-[100%] ${ forPage === "trip" ? "h-[70%]" :"h-[100%]" } m-auto`}
+          className={` absolute inset-0 rounded-3xl w-[100%] ${
+            forPage === "trip" ? "h-[70%]" : "h-[100%]"
+          } m-auto`}
         />
       </div>
     </div>
