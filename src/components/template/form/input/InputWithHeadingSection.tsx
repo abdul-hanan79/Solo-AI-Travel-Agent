@@ -42,7 +42,7 @@ export default function InputWithHeadingSection({
       {select ? (
         <select
           onChange={handlechange}
-          className="border-green shadow-custom-2 border-[2.5px] py-3 bg-transparent font-semibold rounded-3xl text-[#000000de] w-full px-2 outline-none"
+          className="border-green shadow-custom-2 border-[2.5px] py-3 bg-transparent font-semibold rounded-3xl text-[#000000de] w-full px-2 outline-none text-center"
         >
           {insideData?.map((data) => (
             <option

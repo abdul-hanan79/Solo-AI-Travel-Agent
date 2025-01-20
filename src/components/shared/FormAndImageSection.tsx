@@ -12,7 +12,7 @@ export default function FormAndImageSection({
   forPage,
 }: FormAndImageSectionType) {
   return (
-    <div className="w-full h-full grid md:grid-cols-[45%_55%] grid-cols-1">
+    <div className="w-full h-full grid md:grid-cols-[45%_55%] grid-cols-1 overflow-hidden">
       {forPage === "plan" ? (
         <PlanFormSection />
       ) : forPage === "trip" ? (

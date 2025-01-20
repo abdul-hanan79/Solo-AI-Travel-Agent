@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    images: {
-    domains: ['tripplanner.ai'], // Add your external domain here
+  compiler: {
+    styledComponents: true, // Enables styled-components SSR support
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import MediumHeading from "../Header/headingMedium";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "../button/button";
+import { motion, useInView } from "framer-motion";
 interface cardType {
   to?: string;
   from?: string;
@@ -21,8 +22,16 @@ export default function Card({
   paragraph,
   isButton = false,
 }: cardType) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
-    <div className="space-y-2">
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : {}}
+      transition={{ delay: 0.2, type: "tween" }}
+      ref={ref}
+      className="space-y-2 "
+    >
       {isHeading && (
         <MediumHeading variant="large" weight="large">
           {heading}
@@ -49,6 +58,6 @@ export default function Card({
         )}
         {isButton && <Button>Book</Button>}
       </div>
-    </div>
+    </motion.div>
   );
 }

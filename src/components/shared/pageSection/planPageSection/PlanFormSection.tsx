@@ -4,10 +4,11 @@ import InputWithHeadingSection from "@/components/template/form/input/InputWithH
 import TravelersInput from "@/components/template/form/input/travelersInput";
 import InputsData from "@/lib/inputsData";
 import { useFormik } from "formik";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
-
+import { motion } from "framer-motion";
 export default function PlanFormSection() {
+  const Router = useRouter();
   const initialValues = {
     flyingfrom: "New York City",
     flyingto: "Paris",
@@ -20,11 +21,15 @@ export default function PlanFormSection() {
     initialValues,
     onSubmit: (values) => {
       console.log(values);
+      Router.push("/trip");
     },
   });
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, type: "spring", stiffness: 60 }}
       onSubmit={handleSubmit}
       className="xl:w-[75%] w-[90%] mx-auto py-10 flex flex-col items-center justify-center"
     >
@@ -34,7 +39,20 @@ export default function PlanFormSection() {
           className={`grid md:grid-cols-2 grid-cols-1 md:gap-y-6 md:gap-x-4 md:py-6 items-center justify-center w-full`}
         >
           {InputsData.map((properties) => (
-            <div
+            <motion.div
+              initial={
+                properties.id === 0
+                  ? { x: -300 }
+                  : properties.id === 1
+                  ? { x: 200 }
+                  : properties.id === 2
+                  ? { x: -300 }
+                  : properties.id === 3
+                  ? { x: 200 }
+                  : {}
+              }
+              animate={{ x: 0 }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 35 }}
               key={properties.id}
               className={` 
                 ${properties.colSpan && "md:col-span-2"}
@@ -58,15 +76,18 @@ export default function PlanFormSection() {
                 select={properties.select}
                 insideData={properties.insideData}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
-        <div className="pt-5">
-          <Link href={"/trip"}>
-            <Button type="submit">Plan My Trip!</Button>
-          </Link>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="pt-5"
+        >
+          <Button type="submit">Plan My Trip!</Button>
+        </motion.div>
       </div>
-    </form>
+    </motion.form>
   );
 }

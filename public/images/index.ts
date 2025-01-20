@@ -7,5 +7,6 @@ const IMAGES = {
     TOOL2: "/images/sideImages/HousePainting.png",
     TOOL3: "/images/sideImages/BottleAndSnackes.png",
     MAP: "/images/sideImages/map.png",
+    PLANE: "/images/sideImages/plane.webp",
 }
 export default IMAGES;

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { IconType } from "react-icons";
+import { motion, useInView } from "framer-motion";
 
 interface timecardtype {
   text: string;
@@ -12,16 +13,26 @@ export default function TimeCard({
   Icon,
   reverse = false,
 }: timecardtype) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={
+        !reverse
+          ? { x: -80, opacity: 0, scale: 0 }
+          : { x: 80, opacity: 0, scale: 0 }
+      }
+      animate={isInView ? { x: 0, opacity: 1, scale: 1 } : {}}
+      transition={{ delay: 0.1 }}
       className={`flex ${
         reverse ? "flex-row-reverse" : "flex-row"
-      } gap-x-2 items-center hover:scale-105 transition-all duration-300 justify-center shadow-2xl rounded-2xl px-2 py-2.5 w-full text-black font-semibold bg-[#bbf7f7]`}
+      } gap-x-2 items-center justify-center shadow-2xl rounded-2xl px-2 py-2.5 w-full text-black font-semibold bg-[#bbf7f7]`}
     >
       <div>
         <Icon />
       </div>
       <div>{text}</div>
-    </div>
+    </motion.div>
   );
 }
