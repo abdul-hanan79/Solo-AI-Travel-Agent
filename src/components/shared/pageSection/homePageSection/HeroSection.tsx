@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   const Router = useRouter();
   return (
-    <div className="md:w-[90%] w-[95%] mx-auto flex flex-col items-center justify-center h-full gap-y-4">
+    <div className="md:w-[90%] w-[92%] mx-auto flex flex-col items-center justify-center h-full gap-y-4">
       <div className="mx-auto flex flex-col items-center justify-center pb-20 overflow-hidden">
         <motion.div
           initial={{ y: -300, opacity: 0 }}

@@ -327,7 +327,7 @@ const InputsData = [
         id: 3,
         name: "todate",
         type: "date",
-        heading: "From Date",
+        heading: "To Date",
     },
     {
         id: 4,

@@ -15,6 +15,7 @@ export default {
       colors: {
         white: "var(--white)",
         lightgreen: "var(--lightgreen)",
+        extraalightgreen: "var(--extraalightgreen)",
         extralightgreen: "var(--extralightgreen)",
         green: "var(--green)",
         background: "var(--background)",

@@ -3,14 +3,11 @@ import PlanFormSection from "./pageSection/planPageSection/PlanFormSection";
 import ScheduleSection from "./pageSection/tripPageSection/ScheduleSection";
 import Image from "next/image";
 import IMAGES from "../../../public/images";
-
 interface FormAndImageSectionType {
   forPage?: string;
 }
 
-export default function FormAndImageSection({
-  forPage,
-}: FormAndImageSectionType) {
+const FormAndImageSection = ({ forPage }: FormAndImageSectionType) => {
   return (
     <div className="w-full h-full grid md:grid-cols-[45%_55%] grid-cols-1 overflow-hidden">
       {forPage === "plan" ? (
@@ -33,4 +30,5 @@ export default function FormAndImageSection({
       </div>
     </div>
   );
-}
+};
+export default FormAndImageSection;
