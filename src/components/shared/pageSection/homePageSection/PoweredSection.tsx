@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function PoweredSection() {
   return (
-    <div className="w-[90%] mx-auto flex flex-col items-center justify-center gap-y-4 overflow-hidden">
+    <div className="w-[90%] max-w-[1350px] mx-auto flex flex-col items-center justify-center gap-y-4 overflow-hidden">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

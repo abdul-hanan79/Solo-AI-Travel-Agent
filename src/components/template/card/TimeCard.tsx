@@ -23,6 +23,7 @@ export default function TimeCard({
           ? { x: -80, opacity: 0, scale: 0 }
           : { x: 80, opacity: 0, scale: 0 }
       }
+      whileHover={{ scale: 1.1 }}
       animate={isInView ? { x: 0, opacity: 1, scale: 1 } : {}}
       transition={{ delay: 0.1 }}
       className={`flex ${

@@ -10,7 +10,7 @@ export default function ToolSection() {
   const ref = useRef(null);
   const IsViewTrue = useInView(ref);
   return (
-    <div className="pt-24 overflow-hidden">
+    <div className="pt-24 overflow-hidden w-full max-w-[1350px] mx-auto">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 70 }}

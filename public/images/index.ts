@@ -8,5 +8,7 @@ const IMAGES = {
     TOOL3: "/images/sideImages/BottleAndSnackes.png",
     MAP: "/images/sideImages/map.png",
     PLANE: "/images/sideImages/plane.webp",
+    TRIPBG: "/images/sideImages/file.png",
+    TRIPWAVE: "/images/sideImages/wave.png",
 }
 export default IMAGES;

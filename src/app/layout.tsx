@@ -29,8 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} h-full bg-white overflow-x-hidden`}
       >
-        <MouseCursor />
-        <Providers>{children}</Providers>
+        <Providers>
+          <MouseCursor />
+          {children}
+        </Providers>
       </body>
     </html>
   );

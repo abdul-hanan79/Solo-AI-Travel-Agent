@@ -13,7 +13,7 @@ export default function AirPlane() {
     const handleScroll = () => {
       if (window.scrollY >= 60) {
         if (window.screen.width <= 884) {
-          console.log(window.screen.width, "Screen width");
+          // console.log(window.screen.width, "Screen width");
           setHandlePosition({
             y: window.scrollY / 6,
             x: window.scrollY + 100,
@@ -23,10 +23,16 @@ export default function AirPlane() {
             y: window.scrollY / 1,
             x: window.scrollY + 200,
           });
+        } else if (window.screen.width > 1400) {
+          // console.log("greater than 1350px");
+          setHandlePosition({
+            y: window.scrollY / 5,
+            x: window.scrollY + 2000,
+          });
         } else {
           setHandlePosition({
             y: window.scrollY / 2.3,
-            x: window.scrollY + 320,
+            x: window.scrollY + 550,
           });
         }
 

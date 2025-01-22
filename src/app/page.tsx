@@ -6,7 +6,7 @@ import MouseCursor from "@/components/template/MouseCursor";
 
 export default function Home() {
   return (
-    <div className="bg-white h-full w-full mx-auto py-14">
+    <div className="bg-white h-full w-full max-w-full mx-auto py-14">
       <MouseCursor />
       <AirPlane />
       <HeroSection />

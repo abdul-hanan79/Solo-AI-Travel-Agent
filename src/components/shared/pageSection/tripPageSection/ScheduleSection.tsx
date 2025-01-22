@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function ScheduleSection() {
   return (
-    <motion.div className="lg:w-full md:w-[95%] w-[100%] mx-auto space-y-4 py-6">
+    <motion.div className="lg:w-full md:w-[95%] w-[100%] mx-auto space-y-4 pt-6  pb-10">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -22,7 +22,7 @@ export default function ScheduleSection() {
         <TimeCard Icon={FaArrowLeftLong} text={"5th Dec 23"} reverse />
       </div>
       {TripCard.map((data) => (
-        <div key={data.id} className={`pt-7 w-[90%] mx-auto`}>
+        <div key={data.id} className={`pt-6 w-[90%] mx-auto`}>
           <Card
             to={data.to}
             from={data.from}
